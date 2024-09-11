@@ -26,13 +26,17 @@ K-means clustering was employed to group the normalized sentiment and popularity
 Once the optimal k value was determined, the data was grouped into categories based on the identified clusters. Descriptive labels such as "Bad," "OK," "Good," and "Very Good" were assigned to the sentiment clusters based on the sentiment scores within each cluster. For example, cluster 2, which contained sentiment scores greater than 0.4, was labeled as "Very Good." A similar approach was applied to the popularity data, resulting in categories like "Not Popular," "Popular," and "Very Popular."
 
 #### Popularity as Not Popular, Popular, Very Popular
-<img width="620" alt="Screenshot 2024-08-08 at 6 04 33 PM" src="https://github.com/user-attachments/assets/2f5e894e-d6d6-4660-9d6c-3f996201a4f8">  
+<img width="620" alt="Screenshot 2024-08-08 at 6 04 33 PM" src="https://github.com/user-attachments/assets/3e6c9b32-295e-4eb0-bc46-319ca512d392">
 
 #### Sentiment as Bad, Ok, Good, Very Good
-<img width="599" alt="Screenshot 2024-08-08 at 6 04 42 PM" src="https://github.com/user-attachments/assets/601dfeac-b276-4ada-9c81-289296b6cb98">
+<img width="599" alt="Screenshot 2024-08-08 at 6 04 42 PM" src="https://github.com/user-attachments/assets/a5870035-970c-47f3-9e05-73a6e71d4c38">
 
 #### Sentiment vs Popularity
-<img width="613" alt="Screenshot 2024-08-08 at 6 04 14 PM" src="https://github.com/user-attachments/assets/d5341dfb-28a4-4f1b-a974-24fe3157ff3e">
+<img width="613" alt="Screenshot 2024-08-08 at 6 04 14 PM" src="https://github.com/user-attachments/assets/46e8b66a-5d3e-4225-856d-5e339217808e">
+
+#### Optimal k-value for Sentiment & Popularity
+<img width="637" alt="Screenshot 2024-08-08 at 6 03 03 PM" src="https://github.com/user-attachments/assets/84c13430-9489-45e0-982d-11928dcd5ff0">
+
 
 ## Recommendation System
 The dataset, which has been optimized through extensive pre-processing, serves as the cornerstone for the recommendation engine. The project begins by compiling a list of coordinates for various cities across Canada. This list is used to acquire the corresponding coordinates after receiving the user's input for starting and finishing locations. The OpenRouteService API then uses these coordinates to generate precise route information. This provides street names, starting and ending coordinates (latitude and longitude), distance in meters, and estimated travel time in seconds for each street segment. The resulting data, which is initially in JSON format, is saved carefully into a JSON file. This file is then converted to CSV format for improved usage.
@@ -44,7 +48,9 @@ The system utilizes input parameters such as the starting city, ending city, and
 * Sentiment: Reflects the average rating of the POI, ranging from "Very Good" to "Bad."
 * Popularity: Indicates the relative popularity of the POI, spanning from "Not Popular" to "Very Popular."
 * Price Level: Represents the price level of the POI, categorized from "$" to "$$$$$." This structured output format provides users with clear and organized information, aiding in their decision-making process.
-<img width="1037" alt="Screenshot 2024-08-08 at 6 10 34 PM" src="https://github.com/user-attachments/assets/a7388fcf-3430-4bbf-b908-8f9de79af978">
+
+<img width="1037" alt="Screenshot 2024-08-08 at 6 10 34 PM" src="https://github.com/user-attachments/assets/fa7dc8ad-bac1-40e7-bab9-b259fc060780">
+
 
 ## Futurework
 ### Dataset Augmentation for Robustness
